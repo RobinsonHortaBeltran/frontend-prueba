@@ -6,6 +6,8 @@ import { FooterComponent                    } from './pages/footer/footer.compon
 import { AppRoutingModule,routingComponents } from './app-routing.module';
 import {ReactiveFormsModule, FormsModule    } from '@angular/forms';
 import { HttpClientModule                   } from '@angular/common/http';
+import { BrowserAnimationsModule            } from '@angular/platform-browser/animations';
+import { ToastrModule                       } from 'ngx-toastr';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,9 @@ import { HttpClientModule                   } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -21,8 +21,8 @@
             <td>{{ item.id}}</td>
             <td>{{ item.name}} </td>
             <td>{{ item.description}} </td>
-            <td>{{ item.startDate}} </td>
-            <td>{{ item.endDate}} </td>
+            <td>{{ item.startDate.split('T00:00:00.000000Z')[0]}} </td>
+            <td>{{ item.endDate.split('T00:00:00.000000Z')[0]}} </td>
             <td>
               <button (click)="deleteCourse(item.id)" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>&nbsp;&nbsp;
               <button (click)="editCourse(item.id)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
