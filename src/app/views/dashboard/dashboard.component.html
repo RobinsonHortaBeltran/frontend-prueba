@@ -1,1 +1,35 @@
-<p>dashboard works!</p>
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Listado de cursos</h5>
+    <button class="btn btn-success" (click)="newCourse()">
+      Nuevo curso +
+    </button>
+  </div>
+  <div class="card-body">
+    <div class="col-md-12">
+      <table class="table table table-hover">
+        <thead>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>DESCRIPCION</th>
+          <th>FECHA DE INICIO</th>
+          <th>FECHA DE FINALIZACION</th>
+          <th>ACCION</th>
+        </thead>
+        <tbody>
+          <tr *ngFor="let item of courses" >
+            <td>{{ item.id}}</td>
+            <td>{{ item.name}} </td>
+            <td>{{ item.description}} </td>
+            <td>{{ item.startDate}} </td>
+            <td>{{ item.endDate}} </td>
+            <td>
+              <button (click)="deleteCourse(item.id)" class="btn btn-danger"><i class="fa-solid fa-trash-xmark"></i></button>
+              <button (click)="editCourse(item.id)" class="btn btn-warning"><i class="fa-solid fa-trash-xmark"></i></button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
