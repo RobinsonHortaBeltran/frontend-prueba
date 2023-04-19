@@ -1,24 +1,21 @@
-import { NgModule } from '@angular/core';
+import { NgModule      } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './pages/header/header.component';
-import { FooterComponent } from './pages/footer/footer.component';
-import { DashboardComponent } from './views/dashboard/dashboard.component';
-import { NewComponent } from './views/new/new.component';
-import { EditComponent } from './views/edit/edit.component';
+import { AppComponent       } from './app.component';
+import { HeaderComponent    } from './pages/header/header.component';
+import { FooterComponent    } from './pages/footer/footer.component';
+import { AppRoutingModule,routingComponents } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    DashboardComponent,
-    NewComponent,
-    EditComponent
+    routingComponents
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
