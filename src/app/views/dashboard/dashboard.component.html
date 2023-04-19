@@ -2,7 +2,7 @@
   <div class="card-header">
     <h5 class="card-title">Listado de cursos</h5>
     <button class="btn btn-success" (click)="newCourse()">
-      Nuevo curso +
+      Nuevo curso <i class="fa-solid fa-plus"></i>
     </button>
   </div>
   <div class="card-body">
@@ -24,8 +24,8 @@
             <td>{{ item.startDate}} </td>
             <td>{{ item.endDate}} </td>
             <td>
-              <button (click)="deleteCourse(item.id)" class="btn btn-danger"><i class="fa-solid fa-trash-xmark"></i></button>
-              <button (click)="editCourse(item.id)" class="btn btn-warning"><i class="fa-solid fa-trash-xmark"></i></button>
+              <button (click)="deleteCourse(item.id)" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i></button>&nbsp;&nbsp;
+              <button (click)="editCourse(item.id)" class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>
             </td>
           </tr>
         </tbody>

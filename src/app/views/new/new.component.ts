@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormControl,Validators } from '@angular/forms';
 import { ApiService } from '../../services/api/api.service';
-
+import { Router           } from '@angular/router';
 @Component({
   selector: 'app-new',
   templateUrl: './new.component.html',
@@ -16,11 +16,11 @@ export class NewComponent {
     status:      new FormControl(true)
   })
 
-  constructor(private api:ApiService){}
+  constructor(private api:ApiService,private route:Router){}
 
   createNewCourse(form: any){
     this.api.onNewCourse(form).subscribe(data=>{
-      console.log(data);
+      this.route.navigate(['new']);
     })
   }
 }
